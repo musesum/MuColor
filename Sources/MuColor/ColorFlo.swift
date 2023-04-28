@@ -48,7 +48,7 @@ public class ColorFlo {
         mix?.deallocate()
     }
 
-    func getMix(_ palSize: Int) -> UnsafeMutablePointer<UInt32> {
+    public func getMix(_ palSize: Int) -> UnsafeMutablePointer<UInt32> {
         
         if changed || palSize != mixSize {
             changed = false
