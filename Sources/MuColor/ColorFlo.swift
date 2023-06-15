@@ -19,23 +19,20 @@ public class ColorFlo {
 
     public init(_ root: Flo) {
         if let color = root.findPath("sky.color") {
-            xfade˚ = color.findPath("xfade")
-            xfade˚?.addClosure { flo,_ in
+            xfade˚ = color.bind("xfade") { flo,_ in
                 let fade = flo.float
                 self.xfade = fade 
                 self.changed = true
             }
 
-            pal0˚ = color.findPath("pal0")
-            pal0˚?.addClosure { flo,_ in
+            pal0˚ = color.bind("pal0") { flo,_ in
                 self.pal0 = flo.string
                 self.colors[0] = MuColor(flo.string)
                 self.changed = true
             }
             pal0˚?.activate(Visitor(.model))
             
-            pal1˚ = color.findPath("pal1")
-            pal1˚?.addClosure { flo,_ in
+            pal1˚ = color.bind("pal1") { flo,_ in
                 self.pal1 = flo.string
                 self.colors[1] = MuColor(flo.string)
                 self.changed = true
