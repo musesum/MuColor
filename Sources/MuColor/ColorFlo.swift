@@ -1,6 +1,6 @@
 import Foundation
 import MuFlo
-import MuPar // visit
+import MuVisit
 
 public class ColorFlo {
 
