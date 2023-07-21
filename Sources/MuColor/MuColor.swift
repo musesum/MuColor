@@ -39,7 +39,7 @@ public struct MuColor {
                 case "Z": splice.insert(.zeno)
                 case "F": splice.insert(.flip)
                 case " ": break // skip space
-                default: print("🚫 unknown Color shortcut")
+                default: print("⁉️ unknown Color shortcut")
             }
         }
         render(size: 256)
