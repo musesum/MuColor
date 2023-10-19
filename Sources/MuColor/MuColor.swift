@@ -49,14 +49,15 @@ public struct MuColor {
 
         var ret = [Rgb]()
         let count = min(from.rendered.count, to.rendered.count)
-        let invFact = 1-factor
+        let factor01 = factor < 0 ? 0 : factor > 1 ? 1 : factor
+         let invFact = 1-factor01
         for i in 0 ..< count {
             let fromi = from.rendered[i]
             let toi = to.rendered[i]
-            let rgb = Rgb(fromi.r * invFact + toi.r * factor,
-                          fromi.g * invFact + toi.g * factor,
-                          fromi.b * invFact + toi.b * factor,
-                          fromi.a * invFact + toi.a * factor)
+            let rgb = Rgb(fromi.r * invFact + toi.r * factor01,
+                          fromi.g * invFact + toi.g * factor01,
+                          fromi.b * invFact + toi.b * factor01,
+                          fromi.a * invFact + toi.a * factor01)
             ret.append(rgb)
         }
         return ret

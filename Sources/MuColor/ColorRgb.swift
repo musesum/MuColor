@@ -1,5 +1,4 @@
 //  created by musesum on 7/30/19.
-//  Copyright © 2019 DeepMuse All rights reserved.
 
 import Foundation
 
