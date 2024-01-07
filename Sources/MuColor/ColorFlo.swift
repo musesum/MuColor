@@ -4,7 +4,7 @@ import MuFlo
 public class ColorFlo {
 
     private var xfade˚: Flo?        // cross fade flo between two current palettes
-    private var xfade = Float(0.5)  // cross fade current value
+    private var xfade = Float(0)  // cross fade current value
     private var pal0˚: Flo?
     private var pal0 = "rgbK"      // Red Green Blue with blacK interstitials
     private var pal1˚: Flo?
